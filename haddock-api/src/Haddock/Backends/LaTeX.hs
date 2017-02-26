@@ -18,15 +18,16 @@ module Haddock.Backends.LaTeX (
 import Haddock.Types
 import Haddock.Utils
 import Haddock.GhcUtils
-import Pretty hiding (Doc, quote)
-import qualified Pretty
+import ETA.Utils.Pretty hiding (Doc, quote)
+import qualified ETA.Utils.Pretty as Pretty
 
-import GHC
-import OccName
-import Name                 ( nameOccName )
-import RdrName              ( rdrNameOcc )
-import FastString           ( unpackFS, unpackLitString, zString )
-import Outputable           ( panic)
+import ETA.Main.GHC
+import qualified ETA.Main.GHC as GHC
+import ETA.BasicTypes.OccName
+import ETA.BasicTypes.Name            ( nameOccName )
+import ETA.BasicTypes.RdrName         ( rdrNameOcc )
+import ETA.Utils.FastString           ( unpackFS, unpackLitString, zString )
+import ETA.Utils.Outputable           ( panic)
 
 import qualified Data.Map as Map
 import System.Directory

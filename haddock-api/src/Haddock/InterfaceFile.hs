@@ -31,18 +31,18 @@ import qualified Data.Map as Map
 import Data.Map (Map)
 import Data.Word
 
-import BinIface (getSymtabName, getDictFastString)
-import Binary
-import FastMutInt
-import FastString
-import GHC hiding (NoLink)
-import GhcMonad (withSession)
-import HscTypes
-import IfaceEnv
-import Name
-import UniqFM
-import UniqSupply
-import Unique
+import ETA.Iface.BinIface (getSymtabName, getDictFastString)
+import ETA.Utils.Binary
+import ETA.Utils.FastMutInt
+import ETA.Utils.FastString
+import ETA.Main.GHC hiding (NoLink)
+import ETA.Main.GhcMonad (withSession)
+import ETA.Main.HscTypes
+import ETA.Iface.IfaceEnv
+import ETA.BasicTypes.Name
+import ETA.Utils.UniqFM
+import ETA.BasicTypes.UniqSupply
+import ETA.BasicTypes.Unique
 
 
 data InterfaceFile = InterfaceFile {

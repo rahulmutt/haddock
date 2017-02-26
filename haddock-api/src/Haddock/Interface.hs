@@ -50,12 +50,12 @@ import System.Directory
 import System.FilePath
 import Text.Printf
 
-import Digraph
-import DynFlags hiding (verbosity)
-import Exception
-import GHC hiding (verbosity)
-import HscTypes
-import FastString (unpackFS)
+import ETA.Utils.Digraph
+import ETA.Main.DynFlags hiding (verbosity)
+import ETA.Utils.Exception
+import ETA.Main.GHC hiding (verbosity)
+import ETA.Main.HscTypes
+import ETA.Utils.FastString (unpackFS)
 
 -- | Create 'Interface's and a link environment by typechecking the list of
 -- modules using the GHC API and processing the resulting syntax trees.

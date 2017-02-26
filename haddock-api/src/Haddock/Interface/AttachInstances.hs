@@ -25,26 +25,26 @@ import Data.Function (on)
 import qualified Data.Map as Map
 import qualified Data.Set as Set
 
-import Class
-import DynFlags
-import ErrUtils
-import FamInstEnv
-import FastString
-import GHC
-import GhcMonad (withSession)
-import Id
-import InstEnv
-import MonadUtils (liftIO)
-import Name
-import Outputable (text, sep, (<+>))
-import PrelNames
-import SrcLoc
-import TcRnDriver (tcRnGetInfo)
-import TcType (tcSplitSigmaTy)
-import TyCon
-import TypeRep
-import TysPrim( funTyCon )
-import Var hiding (varName)
+import ETA.Types.Class
+import ETA.Main.DynFlags
+import ETA.Main.ErrUtils
+import ETA.Types.FamInstEnv
+import ETA.Utils.FastString
+import ETA.Main.GHC
+import ETA.Main.GhcMonad (withSession)
+import ETA.BasicTypes.Id
+import ETA.Types.InstEnv
+import ETA.Utils.MonadUtils (liftIO)
+import ETA.BasicTypes.Name
+import ETA.Utils.Outputable (text, sep, (<+>))
+import ETA.Prelude.PrelNames
+import ETA.BasicTypes.SrcLoc
+import ETA.TypeCheck.TcRnDriver (tcRnGetInfo)
+import ETA.TypeCheck.TcType (tcSplitSigmaTy)
+import ETA.Types.TyCon
+import ETA.Types.TypeRep
+import ETA.Prelude.TysPrim( funTyCon )
+import ETA.BasicTypes.Var hiding (varName)
 #define FSLIT(x) (mkFastString# (x#))
 
 type ExportedNames = Set.Set Name

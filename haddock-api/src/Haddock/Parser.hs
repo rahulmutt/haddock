@@ -19,14 +19,14 @@ module Haddock.Parser ( parseParas
                       ) where
 
 import qualified Documentation.Haddock.Parser as P
-import DynFlags (DynFlags)
-import FastString (mkFastString)
+import ETA.Main.DynFlags (DynFlags)
+import ETA.Utils.FastString (mkFastString)
 import Documentation.Haddock.Types
-import Lexer (mkPState, unP, ParseResult(POk))
-import Parser (parseIdentifier)
-import RdrName (RdrName)
-import SrcLoc (mkRealSrcLoc, unLoc)
-import StringBuffer (stringToStringBuffer)
+import ETA.Parser.Lexer (mkPState, unP, ParseResult(POk))
+import ETA.Parser.Parser (parseIdentifier)
+import ETA.BasicTypes.RdrName (RdrName)
+import ETA.BasicTypes.SrcLoc (mkRealSrcLoc, unLoc)
+import ETA.Utils.StringBuffer (stringToStringBuffer)
 
 parseParas :: DynFlags -> String -> MetaDoc mod RdrName
 parseParas d = overDoc (P.overIdentifier (parseIdent d)) . P.parseParas

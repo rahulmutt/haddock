@@ -14,11 +14,11 @@ module Haddock.ModuleTree ( ModuleTree(..), mkModuleTree ) where
 
 import Haddock.Types ( MDoc )
 
-import GHC           ( Name )
-import Module        ( Module, moduleNameString, moduleName, modulePackageKey, packageKeyString )
-import DynFlags      ( DynFlags )
-import Packages      ( lookupPackage )
-import PackageConfig ( sourcePackageIdString )
+import ETA.Main.GHC           ( Name )
+import ETA.BasicTypes.Module        ( Module, moduleNameString, moduleName, modulePackageKey, packageKeyString )
+import ETA.Main.DynFlags      ( DynFlags )
+import ETA.Main.Packages      ( lookupPackage )
+import ETA.Main.PackageConfig ( sourcePackageIdString )
 
 
 data ModuleTree = Node String Bool (Maybe String) (Maybe String) (Maybe (MDoc Name)) [ModuleTree]

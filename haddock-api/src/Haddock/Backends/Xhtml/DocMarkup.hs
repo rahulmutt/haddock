@@ -30,8 +30,8 @@ import Haddock.Doc (combineDocumentation, emptyMetaDoc,
 import Text.XHtml hiding ( name, p, quote )
 import Data.Maybe (fromMaybe)
 
-import GHC
-import Name
+import ETA.Main.GHC
+import ETA.BasicTypes.Name
 
 parHtmlMarkup :: Qualification -> Bool
               -> (Bool -> a -> Html) -> DocMarkup a Html

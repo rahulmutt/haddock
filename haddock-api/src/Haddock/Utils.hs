@@ -61,8 +61,8 @@ import Documentation.Haddock.Doc (emptyMetaDoc)
 import Haddock.Types
 import Haddock.GhcUtils
 
-import GHC
-import Name
+import ETA.Main.GHC
+import ETA.BasicTypes.Name
 
 import Control.Monad ( liftM )
 import Data.Char ( isAlpha, isAlphaNum, isAscii, ord, chr )
@@ -84,7 +84,7 @@ import Distribution.ReadE
 import qualified System.Posix.Internals
 #endif
 
-import MonadUtils ( MonadIO(..) )
+import ETA.Utils.MonadUtils ( MonadIO(..) )
 
 
 --------------------------------------------------------------------------------

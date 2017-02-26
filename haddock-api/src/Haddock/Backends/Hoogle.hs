@@ -15,13 +15,13 @@ module Haddock.Backends.Hoogle (
     ppHoogle
   ) where
 
-import BasicTypes (OverlapFlag(..), OverlapMode(..))
-import InstEnv (ClsInst(..))
+import ETA.BasicTypes.BasicTypes (OverlapFlag(..), OverlapMode(..))
+import ETA.Types.InstEnv (ClsInst(..))
 import Haddock.GhcUtils
 import Haddock.Types hiding (Version)
 import Haddock.Utils hiding (out)
-import GHC
-import Outputable
+import ETA.Main.GHC
+import ETA.Utils.Outputable
 
 import Data.Char
 import Data.List

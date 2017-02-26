@@ -19,17 +19,17 @@ module Haddock.GhcUtils where
 import Control.Arrow
 import Data.Function
 
-import Exception
-import Outputable
-import Name
-import Lexeme
-import Module
-import RdrName (GlobalRdrEnv)
-import GhcMonad (withSession)
-import HscTypes
-import UniqFM
-import GHC
-import Class
+import ETA.Utils.Exception
+import ETA.Utils.Outputable
+import ETA.BasicTypes.Name
+import ETA.BasicTypes.Lexeme
+import ETA.BasicTypes.Module
+import ETA.BasicTypes.RdrName (GlobalRdrEnv)
+import ETA.Main.GhcMonad (withSession)
+import ETA.Main.HscTypes
+import ETA.Utils.UniqFM
+import ETA.Main.GHC
+import ETA.Types.Class
 
 
 moduleString :: Module -> String

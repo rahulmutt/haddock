@@ -18,11 +18,11 @@ import Data.Traversable (mapM)
 import Haddock.GhcUtils
 import Haddock.Types
 
-import Bag (emptyBag)
-import GHC hiding (NoLink)
-import Name
-import NameSet
-import Coercion
+import ETA.Utils.Bag (emptyBag)
+import ETA.Main.GHC hiding (NoLink)
+import ETA.BasicTypes.Name
+import ETA.BasicTypes.NameSet
+import ETA.Types.Coercion
 
 import Control.Applicative
 import Control.Monad hiding (mapM)

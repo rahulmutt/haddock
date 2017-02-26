@@ -26,10 +26,10 @@ import Text.XHtml hiding ( name, title, p, quote )
 import qualified Data.Map as M
 import qualified Data.List as List
 
-import GHC
-import Name
-import RdrName
-import FastString (unpackFS)
+import ETA.Main.GHC
+import ETA.BasicTypes.Name
+import ETA.BasicTypes.RdrName
+import ETA.Utils.FastString (unpackFS)
 
 
 -- | Indicator of how to render a 'DocName' into 'Html'

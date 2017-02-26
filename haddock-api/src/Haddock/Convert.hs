@@ -16,30 +16,30 @@ module Haddock.Convert where
 -- Some other functions turned out to be useful for converting
 -- instance heads, which aren't TyThings, so just export everything.
 
-import Bag ( emptyBag )
-import BasicTypes ( TupleSort(..) )
-import Class
-import CoAxiom
-import ConLike
+import ETA.Utils.Bag ( emptyBag )
+import ETA.BasicTypes.BasicTypes ( TupleSort(..) )
+import ETA.Types.Class
+import ETA.Types.CoAxiom
+import ETA.BasicTypes.ConLike
 import Data.Either (lefts, rights)
 import Data.List( partition )
-import DataCon
-import FamInstEnv
+import ETA.BasicTypes.DataCon
+import ETA.Types.FamInstEnv
 import Haddock.Types
-import HsSyn
-import Kind ( splitKindFunTys, synTyConResKind, isKind )
-import Name
-import PatSyn
-import PrelNames (ipClassName)
-import SrcLoc ( Located, noLoc, unLoc, noSrcSpan )
-import TcType ( tcSplitSigmaTy )
-import TyCon
-import Type (isStrLitTy, mkFunTys)
-import TypeRep
-import TysPrim ( alphaTyVars )
-import TysWiredIn ( listTyConName, eqTyCon )
-import Unique ( getUnique )
-import Var
+import ETA.HsSyn.HsSyn
+import ETA.Types.Kind ( splitKindFunTys, synTyConResKind, isKind )
+import ETA.BasicTypes.Name
+import ETA.BasicTypes.PatSyn
+import ETA.Prelude.PrelNames (ipClassName)
+import ETA.BasicTypes.SrcLoc ( Located, noLoc, unLoc, noSrcSpan )
+import ETA.TypeCheck.TcType ( tcSplitSigmaTy )
+import ETA.Types.TyCon
+import ETA.Types.Type (isStrLitTy, mkFunTys)
+import ETA.Types.TypeRep
+import ETA.Prelude.TysPrim ( alphaTyVars )
+import ETA.Prelude.TysWiredIn ( listTyConName, eqTyCon )
+import ETA.BasicTypes.Unique ( getUnique )
+import ETA.BasicTypes.Var
 
 
 

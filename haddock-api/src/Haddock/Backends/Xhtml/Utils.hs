@@ -37,9 +37,10 @@ import Data.Maybe
 import Text.XHtml hiding ( name, title, p, quote )
 import qualified Text.XHtml as XHtml
 
-import GHC      ( SrcSpan(..), srcSpanStartLine, Name )
-import Module   ( Module )
-import Name     ( getOccString, nameOccName, isValOcc )
+import ETA.Main.GHC            ( SrcSpan(..), srcSpanStartLine, Name )
+import qualified ETA.Main.GHC as GHC
+import ETA.BasicTypes.Module   ( Module )
+import ETA.BasicTypes.Name     ( getOccString, nameOccName, isValOcc )
 
 
 spliceURL :: Maybe FilePath -> Maybe Module -> Maybe GHC.Name ->

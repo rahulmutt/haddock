@@ -32,10 +32,10 @@ import qualified Data.Map as Map
 import           Data.Maybe
 import           Text.XHtml hiding     ( name, title, p, quote )
 
-import GHC
+import ETA.Main.GHC
 import GHC.Exts
-import Name
-import BooleanFormula
+import ETA.BasicTypes.Name
+import ETA.Utils.BooleanFormula
 
 ppDecl :: Bool -> LinksInfo -> LHsDecl DocName
        -> DocForDecl DocName -> [DocInstance DocName] -> [(DocName, Fixity)]

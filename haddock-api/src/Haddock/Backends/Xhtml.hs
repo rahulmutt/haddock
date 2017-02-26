@@ -46,10 +46,11 @@ import qualified Data.Set as Set hiding ( Set )
 import Data.Function
 import Data.Ord              ( comparing )
 
-import DynFlags (Language(..))
-import GHC hiding ( NoLink, moduleInfo )
-import Name
-import Module
+import ETA.Main.DynFlags (Language(..))
+import ETA.Main.GHC hiding ( NoLink, moduleInfo )
+import qualified ETA.Main.GHC as GHC
+import ETA.BasicTypes.Name
+import ETA.BasicTypes.Module
 
 --------------------------------------------------------------------------------
 -- * Generating HTML documentation

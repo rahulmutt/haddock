@@ -29,11 +29,11 @@ import Data.Typeable
 import Data.Map (Map)
 import qualified Data.Map as Map
 import Documentation.Haddock.Types
-import BasicTypes (Fixity(..))
-import GHC hiding (NoLink)
-import DynFlags (ExtensionFlag, Language)
-import OccName
-import Outputable
+import ETA.BasicTypes.BasicTypes (Fixity(..))
+import ETA.Main.GHC hiding (NoLink)
+import ETA.Main.DynFlags (ExtensionFlag, Language)
+import ETA.BasicTypes.OccName
+import ETA.Utils.Outputable
 import Control.Monad (ap)
 
 -----------------------------------------------------------------------------

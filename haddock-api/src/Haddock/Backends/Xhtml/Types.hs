@@ -19,7 +19,7 @@ module Haddock.Backends.Xhtml.Types (
 
 
 import Data.Map
-import GHC
+import ETA.Main.GHC
 
 
 -- the base, module and entity URLs for the source code and wiki links.

@@ -35,17 +35,17 @@ import Control.Monad
 import Data.Function (on)
 import qualified Data.Foldable as F
 
-import qualified Packages
-import qualified Module
-import qualified SrcLoc
-import GHC
-import HscTypes
-import Name
-import Bag
-import RdrName
-import TcRnTypes
-import FastString (concatFS)
-import qualified Outputable as O
+import qualified ETA.Main.Packages as Packages
+import qualified ETA.BasicTypes.Module as Module
+import qualified ETA.BasicTypes.SrcLoc as SrcLoc
+import ETA.Main.GHC
+import ETA.Main.HscTypes
+import ETA.BasicTypes.Name
+import ETA.Utils.Bag
+import ETA.BasicTypes.RdrName
+import ETA.TypeCheck.TcRnTypes
+import ETA.Utils.FastString (concatFS)
+import qualified ETA.Utils.Outputable as O
 
 -- | Use a 'TypecheckedModule' to produce an 'Interface'.
 -- To do this, we need access to already processed modules in the topological

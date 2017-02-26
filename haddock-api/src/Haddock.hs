@@ -63,14 +63,14 @@ import Paths_haddock_api (getDataDir)
 import System.Directory (doesDirectoryExist)
 #endif
 
-import GHC hiding (verbosity)
-import Config
-import DynFlags hiding (projectVersion, verbosity)
-import StaticFlags (discardStaticFlags)
-import Packages
-import Panic (handleGhcException)
-import Module
-import FastString
+import ETA.Main.GHC hiding (verbosity)
+import ETA.Main.Constants
+import ETA.Main.DynFlags hiding (projectVersion, verbosity)
+import ETA.Main.StaticFlags (discardStaticFlags)
+import ETA.Main.Packages
+import ETA.Utils.Panic (handleGhcException)
+import ETA.BasicTypes.Module
+import ETA.Utils.FastString
 
 --------------------------------------------------------------------------------
 -- * Exception handling
@@ -153,9 +153,10 @@ haddockWithGhc ghc args = handleTopExceptions $ do
   -- inject dynamic-too into flags before we proceed
   flags' <- ghc flags $ do
         df <- getDynFlags
-        case lookup "GHC Dynamic" (compilerInfo df) of
-          Just "YES" -> return $ Flag_OptGhc "-dynamic-too" : flags
-          _ -> return flags
+        return flags
+        -- case lookup "GHC Dynamic" (compilerInfo df) of
+        --   Just "YES" -> return $ Flag_OptGhc "-dynamic-too" : flags
+          -- _ -> return flags
 
   unless (Flag_NoWarnings `elem` flags) $ do
     forM_ (warnings args) $ \warning -> do

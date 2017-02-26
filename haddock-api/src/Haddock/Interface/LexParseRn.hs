@@ -21,16 +21,16 @@ module Haddock.Interface.LexParseRn
 import Data.IntSet (toList)
 import Data.List
 import Documentation.Haddock.Doc (metaDocConcat)
-import DynFlags (ExtensionFlag(..), languageExtensions)
-import FastString
-import GHC
+import ETA.Main.DynFlags (ExtensionFlag(..), languageExtensions)
+import ETA.Utils.FastString
+import ETA.Main.GHC
 import Haddock.Interface.ParseModuleHeader
 import Haddock.Parser
 import Haddock.Types
-import Name
-import Outputable (showPpr)
-import RdrName
-import RnEnv (dataTcOccs)
+import ETA.BasicTypes.Name
+import ETA.Utils.Outputable (showPpr)
+import ETA.BasicTypes.RdrName
+import ETA.Rename.RnEnv (dataTcOccs)
 
 processDocStrings :: DynFlags -> GlobalRdrEnv -> [HsDocString]
                   -> Maybe (MDoc Name)
