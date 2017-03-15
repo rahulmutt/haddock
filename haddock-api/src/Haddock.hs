@@ -447,7 +447,7 @@ shortcutFlags flags = do
   when (Flag_InterfaceVersion `elem` flags) (bye (show binaryInterfaceVersion ++ "\n"))
   when (Flag_CompatibleInterfaceVersions `elem` flags)
     (bye (unwords (map show binaryInterfaceVersionCompatibility) ++ "\n"))
-  when (Flag_GhcVersion       `elem` flags) (bye (cProjectVersion ++ "\n"))
+  when (Flag_GhcVersion       `elem` flags) (bye (ghcProjectVersion ++ "\n"))
 
   when (Flag_PrintGhcPath `elem` flags) $ do
     dir <- fmap fst (getGhcDirs flags)

@@ -1,0 +1,25 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+- haddock-api
+- haddock-library
+- location:
+    git: http://github.com/typelead/eta.git
+    commit: d69134283da554b28bb2280a4e1e30d9ac1be853
+  subdirs:
+    - '.'
+    - codec-jvm
+    - utils/eta-pkgdb
+- location:
+    git: http://github.com/rahulmutt/ghc-paths.git
+    commit: e86b063dc3b267e046d5fb5c5cc9eab42d1490af
+- location:
+    git: http://github.com/typelead/epm.git
+    commit: 83b22505a790bfd986d77912a5ca3388f47f0379
+  subdirs:
+    - Cabal
+extra-deps:
+- unix-compat-0.4.3.1
+- zip-0.1.8
+resolver: lts-6.27
