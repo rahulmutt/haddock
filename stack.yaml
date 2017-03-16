@@ -6,7 +6,7 @@ packages:
 - haddock-library
 - location:
     git: http://github.com/typelead/eta.git
-    commit: d69134283da554b28bb2280a4e1e30d9ac1be853
+    commit: 715a577154f5db202fb4e90b2cf89bfb6fbdf080
   subdirs:
     - '.'
     - codec-jvm
